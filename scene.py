@@ -1,4 +1,5 @@
 import time
+import os
 from datetime import datetime
 import numpy as np
 import taichi as ti
@@ -171,8 +172,11 @@ class Scene:
             img = self.renderer.fetch_image()
             if self.window.is_pressed('p'):
                 timestamp = datetime.today().strftime('%Y-%m-%d-%H%M%S')
-                fname = f"sceenshot{timestamp}.jpg"
+                dirpath = os.getcwd()
+                print(os.path.dirname(os.path.abspath(__file__)))
+                fname = os.path.join(dirpath, f"screenshot{timestamp}.jpg")
                 ti.tools.image.imwrite(img, fname)
+                print(f"Screenshot has been saved to {fname}")
             canvas.set_image(img)
             elapsed_time = time.time() - t
             if elapsed_time * TARGET_FPS > 1:
