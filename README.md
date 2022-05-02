@@ -13,7 +13,7 @@ to install the dependendies of the voxel renderer.
 Please fill in your code in `main.py` and include your result in this README.md file.
 
 ## Demo
-![](./sceenshot2022-04-16-22:54:18.jpg)
+![](./screenshot2022-05-02-120106.jpg)
 
 ## Quickstart
 
@@ -26,4 +26,3 @@ Mouse and keyboard interface:
 + Drag with your left mouse button to rotate camera.
 + Press `W/A/S/D/Q/E` to move camera.
 + Press `P` to save screenshot.
-
